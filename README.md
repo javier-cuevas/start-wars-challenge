@@ -1,27 +1,28 @@
-# StarWars
+<p align="center">
+    <img width="320px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/320px-Star_Wars_Logo.svg.png
+">
+</p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.6.
+# Star Wars Challenge v1
+
+Technical exercise.
+
+Project generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.6.
+
+## Dependencies
+
+```Angular CLI: 11.0.6```
+```Node: ^12.17.0```
+
+## Installation
+
+Run `npm install`
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve --ssl`
+Navigate to ```http://localhost:4200/```
 
-## Code scaffolding
+## Build Production
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Run `ng b --prod`
