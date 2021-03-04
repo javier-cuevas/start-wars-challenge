@@ -7,9 +7,15 @@ import { StarWardsRoutingModule } from './star-wards-routing.module';
 import { ListComponent } from './list/list.component';
 import { DetailComponent } from './detail/detail.component';
 
+//Pipes
+import { FormatPipe } from 'src/app/pipes/format.pipe';
 
 @NgModule({
-  declarations: [ListComponent, DetailComponent],
+  declarations: [
+    ListComponent, 
+    DetailComponent,
+    FormatPipe
+  ],
   imports: [
     CommonModule,
     StarWardsRoutingModule

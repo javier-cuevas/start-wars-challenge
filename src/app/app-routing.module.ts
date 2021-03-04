@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 //Layouts
 import { MainComponent } from 'src/app/layouts/main/main.component';
+import { NotFoundComponent } from 'src/app/layouts/not-found/not-found.component';
 
 const routes: Routes = [
   {
@@ -29,6 +30,10 @@ const routes: Routes = [
         loadChildren: () => import('./modules/read-more/read-more.module').then(m => m.ReadMoreModule)
       }
     ]
+  },
+  {
+    path:'**',
+    component:NotFoundComponent
   }
 ];
 

@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
-
 @Component({
-  selector: 'app-read-more',
-  templateUrl: './read-more.component.html',
+  selector: 'app-not-found',
+  templateUrl: './not-found.component.html',
   styles: [
   ]
 })
-export class ReadMoreComponent implements OnInit {
+export class NotFoundComponent implements OnInit {
 
   constructor() { }
 
