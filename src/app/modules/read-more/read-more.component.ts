@@ -3,15 +3,7 @@ import { FormGroup, Validators, FormBuilder, ValidationErrors, ValidatorFn, Abst
 
 import * as moment from 'moment';
 
-function ageValidator(age: number) {
-  return (control: AbstractControl) => {
-    let date_format = `${control.value.year}-${control.value.month}-${control.value.day}`;
-    if ( control.value != '' && moment().diff(date_format, 'years')>=age ) {
-      return true;
-    }
-    return { ageValidator: false};
-  };
-}
+
 
 @Component({
   selector: 'app-read-more',
@@ -35,8 +27,18 @@ export class ReadMoreComponent implements OnInit {
     this.newForm = this.form.group({
       name:['', Validators.required],
       last_name:['', Validators.required],
-      age:['',ageValidator(18)]
+      age:['',this.ageValidator(18)]
     });
+  }
+
+  ageValidator(age: number) {
+    return (control: AbstractControl) => {
+      let date_format = `${control.value.year}-${control.value.month}-${control.value.day}`;
+      if ( control.value != '' && moment().diff(date_format, 'years')>=age ) {
+        return true;
+      }
+      return { ageValidator: false};
+    };
   }
 
   showData(){
