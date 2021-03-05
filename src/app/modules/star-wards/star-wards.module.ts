@@ -9,12 +9,14 @@ import { DetailComponent } from './detail/detail.component';
 
 //Pipes
 import { FormatPipe } from 'src/app/pipes/format.pipe';
+import { RevertPipe } from 'src/app/pipes/revert.pipe';
 
 @NgModule({
   declarations: [
     ListComponent, 
     DetailComponent,
-    FormatPipe
+    FormatPipe,
+    RevertPipe
   ],
   imports: [
     CommonModule,

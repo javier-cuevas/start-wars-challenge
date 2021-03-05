@@ -20,7 +20,7 @@ Run `npm install`
 
 ## Development server
 
-Run `ng serve --ssl`
+Run `ng serve `
 Navigate to ```http://localhost:4200/```
 
 ## Build Production

@@ -4,7 +4,7 @@ export class FilmDetail {
     opening_crawl: string;
     director: string;
     release_date:string;
-    starships:any;
-    characters:any
-    planets:any
+    starships:Array<any>;
+    characters:Array<any>
+    planets:Array<any>
 }

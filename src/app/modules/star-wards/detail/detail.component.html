@@ -5,50 +5,61 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center">
-					<h2 class="title">Name Episode 4</h2>
+					<h2 class="title">Episode {{detail?.episode_id}} | {{detail?.title}}</h2>
 					<div class="section-space"></div>
 				</div>
 			</div>
 
 			<div class="row">
 
-				<div class="col-md-5">
+				<div class="col-md-4">
 					<div class="info info-horizontal">
 						<div class="icon icon-info">
 							
 						</div>
 						<div class="description">
-							<h4 class="info-title">naves</h4>
-							<p class="description">
-								info
-							</p>
+							<h4 class="info-title">Naves</h4>
+							<ng-container *ngFor="let starship of starships">
+								<p class="description">
+									{{starship?.name | revert}}
+								</p>
+							</ng-container>
 						</div>
 		        	</div>
-
-					<div class="info info-horizontal">
-						<div class="icon icon-primary">
-							
-						</div>
-						<div class="description">
-							<h4 class="info-title">personajes</h4>
-							<p class="description">
-								info
-							</p>
-						</div>
-					</div>
-
-					<div class="info info-horizontal">
-						<div class="icon icon-danger">
-							
-						</div>
-						<div class="description">
-							<h4 class="info-title">Planetas Info</h4>
-							<p class="description">
-								info
-							</p>
-						</div>
-					</div>
 				</div>
+
+				<div class="col-md-4">
+					<div class="info info-horizontal">
+						<div class="icon icon-info">
+							
+						</div>
+						<div class="description">
+							<h4 class="info-title">Personajes</h4>
+							<ng-container *ngFor="let character of characters">
+								<p class="description">
+									{{character?.name | revert}}
+								</p>
+							</ng-container>
+						</div>
+		        	</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="info info-horizontal">
+						<div class="icon icon-info">
+							
+						</div>
+						<div class="description">
+							<h4 class="info-title">Planetas</h4>
+							<ng-container *ngFor="let planet of planets">
+								<p class="description">
+									{{planet?.name | revert}}
+								</p>
+							</ng-container>
+						</div>
+		        	</div>
+				</div>
+				
 
 			</div>
 

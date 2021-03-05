@@ -9,6 +9,7 @@ import { environment } from 'src/environments/environment';
 
 //Models
 import { Response } from 'src/app/models/response';
+import { FilmDetail } from 'src/app/models/film-detail';
 
 @Injectable({
   providedIn: 'root'
@@ -34,9 +35,17 @@ export class ApiStarWarsService {
     );
   }
 
-  getDetail(id:number): Observable<Response>{
-    const url = `${environment.urlapi}films/${id}`;
-    return this.http.get<Response>(url,this.httpHeader)
+  getDetail(id:number): Observable<FilmDetail>{
+    const url = `${environment.urlapi}films/${id}/`;
+    return this.http.get<FilmDetail>(url,this.httpHeader)
+    .pipe(
+      retry(1),
+      catchError(this.error)
+    );
+  }
+
+  getStarships(url:string): Observable<any>{
+    return this.http.get<FilmDetail>(url,this.httpHeader)
     .pipe(
       retry(1),
       catchError(this.error)

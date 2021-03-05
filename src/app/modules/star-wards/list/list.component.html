@@ -10,7 +10,7 @@
 
         <div class="row">
 
-            <ng-container *ngFor="let film of films">
+            <ng-container *ngFor="let film of films; let i = index">
                 <div class="col-md-4 mb-4">
                     <div class="card card-sw-list">
                         <div class="card-episode">
@@ -19,7 +19,7 @@
                         </div>
 
                         <div class="card-content">
-                            <a [routerLink]="['../detail/',film?.episode_id]">
+                            <a [routerLink]="['../detail/',i+1]">
                                 <h4 class="card-title">{{film?.title}}</h4>
                             </a>
                             <h5 class="category text-muted">{{film?.director}}</h5>
