@@ -12,7 +12,7 @@ Technical exercise.
   </a>
 </p>
 
-<a href="https://javier-cuevas.github.io/start-wars-challenge" >Live Previo: javier-cuevas.github.io/start-wars-challenge/star-wards/list</a>
+<a href="https://javier-cuevas.github.io/start-wars-challenge" >Live Previo: javier-cuevas.github.io/start-wars-challenge</a>
 
 Project generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.6.
 
