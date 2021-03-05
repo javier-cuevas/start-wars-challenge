@@ -1,5 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, Validators, FormBuilder, ValidationErrors, ValidatorFn, AbstractControl } from "@angular/forms";
 
+import * as moment from 'moment';
+
+function ageValidator(age: number) {
+  return (control: AbstractControl) => {
+    let date_format = `${control.value.year}-${control.value.month}-${control.value.day}`;
+    if ( control.value != '' && moment().diff(date_format, 'years')>=age ) {
+      return true;
+    }
+    return { ageValidator: false};
+  };
+}
 
 @Component({
   selector: 'app-read-more',
@@ -9,9 +21,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReadMoreComponent implements OnInit {
 
-  constructor() { }
+  newForm: FormGroup;
+
+  model: any;
+
+  constructor(private form: FormBuilder) { }
 
   ngOnInit(): void {
+    this.initForm();
+  }
+
+  initForm() {
+    this.newForm = this.form.group({
+      name:['', Validators.required],
+      last_name:['', Validators.required],
+      age:['',ageValidator(18)]
+    });
+  }
+
+  showData(){
+    console.log(this.newForm.value);
   }
 
 }
